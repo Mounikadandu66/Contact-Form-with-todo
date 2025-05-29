@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <style>
+  html {
+    height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+  } 
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      /*background: #fff0f5;*/
+      background-image: url('https://png.pngtree.com/background/20250103/original/pngtree-cherry-blossom-background-digital-watercolor-painting-japanese-animation-style-picture-image_15697353.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #333;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      background: linear-gradient(180deg,  #f55288, #bb2abb);
+      color: white;
+      padding: 5px;
+      font-style: italic;
+      text-align: center;
+      box-shadow: 0 4px 20px #fb9bd5;
+    }
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .form-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    #contactForm {
+     
+      border: 2px solid #f783ac;
+      border-radius: 35px;
+      padding: 30px;
+      border-width: 2px;
+      box-shadow: 0 0 75px  rgba(251, 54, 152, 0.893);
+      max-width: 440px;
+      background-color:#feadce;
+      width: 100%;
+      min-height: 500px;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      gap: 10px;
+    }
+
+    .form-row label {
+      width: 120px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #de1457;
+    }
+
+    .form-row input[type="text"],
+    .form-row input[type="email"],
+    .form-row textarea {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid #f783ac;
+      border-radius: 8px;
+      background-color: #fff0f5;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .task-input-wrap {
+      display: flex;
+      flex: 1;
+      gap: 10px;
+    }
+
+    .task-input-wrap input {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid #f783ac;
+      border-radius: 8px;
+      background-color: #fff0f5;
+    }
+
+    .task-input-wrap button {
+      padding: 10px 16px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .task-input-wrap button:hover {
+      background-color: #d63384;
+    }
+
+    #contactForm button[type="submit"] {
+      background-color: #e91e63;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    #contactForm button[type="submit"]:hover {
+      background-color: #d63384;
+    }
+
+    #taskList {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    #taskList li {
+      background: #ffe0ec;
+      padding: 8px 12px;
+      margin: 5px 0;
+      border-radius: 6px;
+      font-style: italic;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    #taskList li:hover {
+      transform: scale(1.02);
+      background-color: #ffd9e8;
+    }
+
+    #taskList li button {
+      background: #e91e63;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .form-msg {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3px;
+      background:#f96999;
+      color: #580b58;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="hero">
+      <h1><i>Contact Form </i></h1>
+    </header>
+
+    <main class="grid-layout">
+      <section class="form-section">
+        <form id="contactForm">
+          <i><h2 style="color: #7a087a">Give Your Information Here</h2></i>
+
+          <div class="form-row">
+            <label for="name"><i>Full Name  :</i></label>
+            <input type="text" id="name" placeholder="Enter your sweet name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email"><i>Email  : </i></label>
+            <input type="email" id="email" placeholder="Enter your lovely email" required />
+
+          </div>
+           <div class="form-row">
+          <label for="message"><i>Message  :</i></label>
+          <textarea id="message" rows="3" placeholder="Leave your sweet message here..." required></textarea>
+        </div>
+
+          <i><h2 style="color: #7a087a">Your To-Do, My Priority!</h2></i>
+
+          <div class="form-row">
+            <div class="task-input-wrap">
+              <input type="text" id="taskInput" placeholder="Add your dreamy task..." />
+              <button type="button" onclick="addTask()">Add Task</button>
+            </div>
+          </div>
+
+          <ul id="taskList"></ul>
+
+          <p id="formMsg" class="form-msg"></p><br>
+          <center><button type="submit">Submit 💞</button></center>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p><i><b>© 2025 Built with 💓 by Mounika</b></i></p>
+    </footer>
+  </div>
+
+  <script>
+   
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const formMsg = document.getElementById("formMsg");
+
+      const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+      if (!name || !email) {
+        alert("Fill your details completely!");
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        alert("Enter valid Email 💌");
+        return;
+      }
+
+      alert("Form Submitted Successfully 💖");
+      document.getElementById("contactForm").reset();
+      document.getElementById("taskList").innerHTML = "";
+    });
+
+    function addTask() {
+      const taskInput = document.getElementById("taskInput");
+      const taskList = document.getElementById("taskList");
+      const task = taskInput.value.trim();
+
+      if (task === "") return;
+
+      const li = document.createElement("li");
+      li.textContent = task;
+
+      const delBtn = document.createElement("button");
+      delBtn.textContent = "Remove";
+      delBtn.onclick = () => li.remove();
+
+      li.appendChild(delBtn);
+      taskList.appendChild(li);
+      taskInput.value = "";
+    }
+    
+  </script>
+</body>
+</html>
